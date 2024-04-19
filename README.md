@@ -65,4 +65,28 @@ services:
 | VPN_PASS         | Required        | Your NordVPN token for manual connection             |
 | KILL_SWITCH      | Optional        | "Set to 'on' or 'off', default is 'off'              |
 
+### Where to find NordVPN credentials
+The NordVPN credentials for manual connection can be retrieved from the personal page of the service, under the section "Get service credentials or an access token."
+
+### Interacting with other containers
+After launching your nordvpn-client-doh container, you can enable other containers to utilize its VPN tunnel by leveraging its network stack. How you achieve this depends on how your container is set up:
+1 - If your container is created using the same Compose YAML file as nordvpn-client-doh, include network_mode: 'service:nordvpn-client-doh' in the container's service definition.
+2 - If your container is created using a different Compose YAML file than nordvpn-client-doh, include 'network_mode: container:nordvpn-client-doh' in the container's service definition.
+3 - If you're using docker run, add --network=container:nordvpn-client-doh as an option.
+
+### Managing ports for connected containers
+If you're trying to access a port from a connected container, it's better to expose that port on the nordvpn-client-doh container instead. Here's how you can do it:
+
+For docker run, use ***-p <host_port>:<container_port>***.
+If you're using docker-compose, add this snippet to the openvpn-client service definition in your Compose file:
+
+```yaml
+ports:
+  - <host_port>:<container_port>
+```
+
+Remember to replace ***<host_port>*** and ***<container_port>*** with the corresponding port numbers used by your connected container.
+
+## Testing
+
 
