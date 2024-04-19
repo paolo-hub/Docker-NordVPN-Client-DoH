@@ -40,17 +40,17 @@ services:
     cap_add:
       - NET_ADMIN
     environment:
-      - ALLOWED_SUBNETS='your local net'
+      - ALLOWED_SUBNETS="your local net"
       - VPN_SERVICE=NordVPN
-      - VPN_SERVER='name of the NordVPN server'
-      - VPN_PROTOCOL='UDP or TCP'
-      - VPN_USER='your user for manual connection'
-      - VPN_PASS='your token for manual connection
-      - KILL_SWITCH='on or off'
+      - VPN_SERVER="name of the NordVPN server"
+      - VPN_PROTOCOL="UDP or TCP"
+      - VPN_USER="your user for manual connection"
+      - VPN_PASS="your token for manual connection"
+      - KILL_SWITCH="on or off"
     devices:
       - /dev/net/tun:/dev/net/tun
     ports:
       # List of Ports
-      - host_port:contaier_port 
+      - "host_port":"contaier_port"
 ```
 
