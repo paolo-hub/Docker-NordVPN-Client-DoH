@@ -57,7 +57,8 @@ services:
 
 |     Variable     |        Requirments       |  Description  |
 | ---------------- | ------------------------ | ------------- |
-| ALLOWED_SUBNETS  | a                        | a             |
+| ALLOWED_SUBNETS  | Optional                 | A list of one or more comma-separated subnets (e.g. 192.168.100.0/24,192.168.150.0/24) |
+|                  |                          | to allow outside of the VPN tunnel.                                                    |
 | VPN_SERVICE      | b                        | a             |
 | VPN_SERVER       | c                        | a             |
 | VPN_PROTOCOL     | d                        | a             |
