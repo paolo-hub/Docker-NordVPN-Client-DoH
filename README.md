@@ -63,6 +63,6 @@ services:
 | VPN_PROTOCOL     | d                        | a             |
 | VPN_USER         | e                        | a             |
 | VPN_PASS         | f                        | a             |
-| KILL_SWITCH      ! g                        | a             |
+| KILL_SWITCH      | g                        | a             |
 
 
