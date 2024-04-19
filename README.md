@@ -56,7 +56,7 @@ services:
 ### Environment variables
 
 |     Variable     |        Requirments       |  Description  |
-| ----_----------- | ------------------------ | ------------- |
+| ---------------- | ------------------------ | ------------- |
 | ALLOWED_SUBNETS  | a                        | a             |
 | VPN_SERVICE      | b                        | a             |
 | VPN_SERVER       | c                        | a             |
