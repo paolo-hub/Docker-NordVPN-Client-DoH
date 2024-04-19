@@ -63,7 +63,7 @@ services:
 | VPN_PROTOCOL     | Required        | Choose either UDP or TCP based on your preference             |
 | VPN_USER         | Required        | Your NordVPN username for manual connection              |
 | VPN_PASS         | Required        | Your NordVPN token for manual connection             |
-| KILL_SWITCH      | Optional        | "Set to 'on' or 'off', default is 'off'              |
+| KILL_SWITCH      | Optional        | Set to 'on' or 'off', default is 'off'              |
 
 ### Where to find NordVPN credentials
 The NordVPN credentials for manual connection can be retrieved from the personal page of the service, under the section "Get service credentials or an access token."
