@@ -57,13 +57,13 @@ services:
 
 |     Variable     |        Requirments       |  Description  |
 | ----_----------- | ------------------------ | ------------- |
-| ALLOWED_SUBNETS  |
-| VPN_SERVICE      |
-| VPN_SERVER       |
-| VPN_PROTOCOL     |
-| VPN_USER         |
-| VPN_PASS         |
-| KILL_SWITCH      !
+| ALLOWED_SUBNETS  | a                        | a             |
+| VPN_SERVICE      | b                        | a             |
+| VPN_SERVER       | c                        | a             |
+| VPN_PROTOCOL     | d                        | a             |
+| VPN_USER         | e                        | a             |
+| VPN_PASS         | f                        | a             |
+| KILL_SWITCH      ! g                        | a             |
 
 
 
