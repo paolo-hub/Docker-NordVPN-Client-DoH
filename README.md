@@ -29,7 +29,7 @@ The supported platforms are:
 
 ### Deploy the container
 To run the container, you can use the following Docker Compose file:
-```
+```yaml
 version: "3.9"
 
 services:
