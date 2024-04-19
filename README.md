@@ -55,14 +55,14 @@ services:
 ```
 ### Environment variables
 
-|     Variable     |        Requirments       |  Description  |
-| ---------------- | ------------------------ | ------------- |
-| ALLOWED_SUBNETS  | Optional                 | A list of one or more comma-separated subnets (e.g. 192.168.100.0/24,192.168.150.0/24) to allow outside of the VPN tunnel. |
-| VPN_SERVICE      | Required                 | NordVPN, this variable has been set for future integration with other VPN services                                         |
-| VPN_SERVER       | c                        | The VPN server name, for example, is it250. You can find this name on servers recommended by NordVPN (https://nordvpn.com/it/servers/tools/)            |
-| VPN_PROTOCOL     | d                        | a             |
-| VPN_USER         | e                        | a             |
-| VPN_PASS         | f                        | a             |
-| KILL_SWITCH      | g                        | a             |
+|     Variable     |    Requirments  |  Description   |
+| ---------------- | --------------- | -------------- |
+| ALLOWED_SUBNETS  | Optional/Require KILL_SWITCH 'on'| A list of one or more comma-separated subnets (e.g. 192.168.100.0/24,192.168.150.0/24) to allow outside of the VPN tunnel. |
+| VPN_SERVICE      | Required        | NordVPN, this variable has been set for future integration with other VPN services                                         |
+| VPN_SERVER       | Required        | The VPN server name, for example, is it250. You can find this name on servers recommended by NordVPN (https://nordvpn.com/it/servers/tools/)|
+| VPN_PROTOCOL     | Required        | Choose either UDP or TCP based on your preference             |
+| VPN_USER         | Required        | Your NordVPN username for manual connection              |
+| VPN_PASS         | Required        | Your NordVPN token for manual connection             |
+| KILL_SWITCH      | Optional        | "Set to 'on' or 'off', default is 'off'              |
 
 
