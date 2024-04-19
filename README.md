@@ -10,3 +10,6 @@ It originates from the integration of these projects:
 * from [Ben Lobaugh](https://github.com/blobaugh)'s work in the [Docker OpenVPN Client](https://github.com/blobaugh/docker-openvpn-client.git) project
 * from [Wyatt Gill](https://github.com/wfg)'s work in the [Docker OpenVPN Client](https://github.com/wfg/docker-openvpn-client.git) project
 * from my other project [Docker Cloudflare DoH](https://github.com/paolo-hub/Docker-Cloudflare-DoH.git)
+
+## 🙊 Psst... the unspoken truth
+This image is designed to utilize the NordVPN service but can easily be reconstructed for any other VPN service.
