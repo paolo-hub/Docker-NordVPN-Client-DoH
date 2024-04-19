@@ -58,8 +58,8 @@ services:
 |     Variable     |        Requirments       |  Description  |
 | ---------------- | ------------------------ | ------------- |
 | ALLOWED_SUBNETS  | Optional                 | A list of one or more comma-separated subnets (e.g. 192.168.100.0/24,192.168.150.0/24) to allow outside of the VPN tunnel. |
-| VPN_SERVICE      | b                        | a             |
-| VPN_SERVER       | c                        | a             |
+| VPN_SERVICE      | Required                 | NordVPN, this variable has been set for future integration with other VPN services                                         |
+| VPN_SERVER       | c                        | The VPN server name, for example, is it250. You can find this name on servers recommended by NordVPN (https://nordvpn.com/it/servers/tools/)            |
 | VPN_PROTOCOL     | d                        | a             |
 | VPN_USER         | e                        | a             |
 | VPN_PASS         | f                        | a             |
