@@ -70,7 +70,7 @@ The NordVPN credentials for manual connection can be retrieved from the personal
 
 ### Interacting with other containers
 After launching your nordvpn-client-doh container, you can enable other containers to utilize its VPN tunnel by leveraging its network stack. How you achieve this depends on how your container is set up:
-1. If your container is created using the same Compose YAML file as nordvpn-client-doh, ***include network_mode: 'service:nordvpn-client-doh'*** in the container's service definition.
+1. If your container is created using the same Compose YAML file as nordvpn-client-doh, `include network_mode: 'service:nordvpn-client-doh'` in the container's service definition.
 2. If your container is created using a different Compose YAML file than nordvpn-client-doh, ***include 'network_mode: container:nordvpn-client-doh'*** in the container's service definition.
 3. If you're using docker run, add ***--network=container:nordvpn-client-doh*** as an option.
 
