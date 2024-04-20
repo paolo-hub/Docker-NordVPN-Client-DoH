@@ -85,7 +85,7 @@ ports:
   - <host_port>:<container_port>
 ```
 
-Remember to replace ***<host_port>*** and ***<container_port>*** with the corresponding port numbers used by your connected container.
+Remember to replace `host_port` and `container_port` with the corresponding port numbers used by your connected container.
 
 ## Build Your Own Image
 
