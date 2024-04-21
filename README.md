@@ -90,5 +90,58 @@ Remember to replace `host_port` and `container_port` with the corresponding port
 ## Build Your Own Image
 
 ## Testing
+Once the container is up and running, you can perform connection tests to ensure everything is working properly.
+1. You can check if the DNS server has been correctly received by running:
 
+```bash
+$ docker run --rm -it --network=container:nordvpn-client-doh alpine cat /etc/resolv.conf
 
+nameserver 127.0.0.1
+```
+2. You can verify that the public IP address of the connection is different from your own network by checking the IPs assigned by NordVPN:
+
+```bash
+$ docker run --rm -it --network=container:nordvpn-client-doh alpine wget -qO - ifconfig.me
+
+178.249.211.9
+```
+
+Where the IP reported is one of NordVPN's servers.
+
+You can also perform additional tests by leveraging a Ubuntu container launched with bash:
+
+```bash
+$ docker run -it --network="container:nordvpn-client-doh" ubuntu bash
+```
+
+3. Then, you can execute a server speed test, which can be useful for comparing performance between different servers:
+
+```
+$ apt update && apt install speedtest-cli -y && speedtest
+```
+
+4. You can verify the actual connection to Cloudflare and check for any DNS leaks using the script developed in this GitHub project: [https://github.com/macvk/dnsleaktest](https://github.com/macvk/dnsleaktest)
+
+```bash
+# Install necessary packages
+apt install curl
+apt install iputils-ping
+
+# Download the script
+curl https://raw.githubusercontent.com/macvk/dnsleaktest/master/dnsleaktest.sh -o dnsleaktest.sh
+
+# Make it executable
+chmod +x dnsleaktest.sh
+
+# Then run it
+./dnsleaktest.sh
+
+# The test result is as follows
+Your IP:
+178.249.211.9 [Italy, AS212238 DataCamp Limited]
+You use 2 DNS servers:
+162.158.196.118 [Italy, AS13335 CloudFlare Inc.]
+162.158.196.119 [Italy, AS13335 CloudFlare Inc.]
+```
+
+Here, you can see the NordVPN IP and the two Cloudflare DNS server IPs, indicating no leaks.
