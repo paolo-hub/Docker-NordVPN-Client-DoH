@@ -120,7 +120,7 @@ $ docker run -it --network="container:nordvpn-client-doh" ubuntu bash
 $ apt update && apt install speedtest-cli -y && speedtest
 ```
 
-4. You can verify the actual connection to Cloudflare and check for any DNS leaks using the script developed in the Macvk GitHub project: [dnsleaktest](https://github.com/macvk/dnsleaktest)
+4. You can verify the actual connection to Cloudflare and check for any DNS leaks using the script developed in the macvk GitHub project: [dnsleaktest](https://github.com/macvk/dnsleaktest)
 
 ```bash
 # Install necessary packages
