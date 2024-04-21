@@ -78,7 +78,7 @@ After launching your nordvpn-client-doh container, you can enable other containe
 If you're trying to access a port from a connected container, it's better to expose that port on the nordvpn-client-doh container instead. Here's how you can do it:
 
 For docker run, use `-p <host_port>:<container_port>`.
-If you're using docker-compose, add this snippet to the openvpn-client service definition in your Compose file:
+If you're using docker-compose, add this snippet to the nordvpn-client-doh service definition in your Compose file:
 
 ```yaml
 ports:
