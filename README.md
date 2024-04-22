@@ -121,17 +121,17 @@ $ apt update && apt install speedtest-cli -y && speedtest
 
 ```bash
 # Install necessary packages
-apt install curl
-apt install iputils-ping
+$ apt install curl
+$ apt install iputils-ping
 
 # Download the script
-curl https://raw.githubusercontent.com/macvk/dnsleaktest/master/dnsleaktest.sh -o dnsleaktest.sh
+$ curl https://raw.githubusercontent.com/macvk/dnsleaktest/master/dnsleaktest.sh -o dnsleaktest.sh
 
 # Make it executable
-chmod +x dnsleaktest.sh
+$ chmod +x dnsleaktest.sh
 
 # Then run it
-./dnsleaktest.sh
+$ ./dnsleaktest.sh
 
 # The test result is as follows
 Your IP:
