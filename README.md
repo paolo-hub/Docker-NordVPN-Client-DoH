@@ -102,9 +102,8 @@ nameserver 127.0.0.1
 ```bash
 $ docker run --rm -it --network=container:nordvpn-client-doh alpine wget -qO - ifconfig.me
 
-178.249.211.9
+178.249.211.9 # This IP is one of NordVPN's servers.
 ```
- Where the IP reported is one of NordVPN's servers.
 
 You can also perform additional tests by leveraging a Ubuntu container launched with bash:
 
