@@ -99,14 +99,12 @@ $ docker run --rm -it --network=container:nordvpn-client-doh alpine cat /etc/res
 nameserver 127.0.0.1
 ```
 2. You can verify that the public IP address of the connection is different from your own network by checking the IPs assigned by NordVPN:
-
 ```bash
 $ docker run --rm -it --network=container:nordvpn-client-doh alpine wget -qO - ifconfig.me
 
 178.249.211.9
 ```
-
-Where the IP reported is one of NordVPN's servers.
+ Where the IP reported is one of NordVPN's servers.
 
 You can also perform additional tests by leveraging a Ubuntu container launched with bash:
 
@@ -120,7 +118,7 @@ $ docker run -it --network="container:nordvpn-client-doh" ubuntu bash
 $ apt update && apt install speedtest-cli -y && speedtest
 ```
 
-4. You can verify the actual connection to Cloudflare and check for any DNS leaks using the script developed in the macvk GitHub project: [dnsleaktest](https://github.com/macvk/dnsleaktest)
+4. You can verify the actual connection to Cloudflare and check for any DNS leaks using the script developed in the [macvk](https://github.com/macvk) GitHub project: [dnsleaktest](https://github.com/macvk/dnsleaktest)
 
 ```bash
 # Install necessary packages
