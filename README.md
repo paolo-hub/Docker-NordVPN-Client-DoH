@@ -88,6 +88,53 @@ ports:
 Remember to replace `host_port` and `container_port` with the corresponding port numbers used by your connected container.
 
 ## Build Your Own Image
+If preferred, you can create the Docker image locally. Follow these steps:
+
+1. Clone the Git repository to your local machine:
+``` bash
+git clone https://github.com/paolo-hub/Docker-NordVPN-Client-DoH.git
+```
+2. Navigate to the cloned repository directory:
+``` bash
+cd Docker-NordVPN-Client-DoH/build
+```
+3. Next, build the Docker image using the provided Dockerfile:
+```bash
+docker build -t paolo83/nordvpn-client-doh:latest -f Dockerfile .
+```
+
+### How to create an image for a different VPN service
+If you want to create the image to use a VPN service other than NordVPN, you can add its respective *.ovpn certificates and recreate the image. To do this, follow these steps:
+
+1. Clone the Git repository to your local machine:
+```bash
+git clone https://github.com/paolo-hub/Docker-NordVPN-Client-DoH.git
+```
+2. Navigate to the cloned repository directory:
+```bash
+cd Docker-NordVPN-Client-DoH/build
+```
+In this folder, you will find the following items:
+  * servers
+  * Dockerfile
+  * dnscrypt-proxy.toml
+  * entry.sh
+  * kill_switch.sh
+
+Inside the `servers` folder, there is a subfolder for the `NordVPN` service, which contains two folders: `TCP` and `UDP`. To add a new service, for example, `MyVPN`, add a `MyVPN` folder inside the `servers` folder and create the `TCP` and `UDP` folders within it. Then, add the `*.ovpn` certificates into their respective `TCP` and `UDP` folders.
+Remember:
+1. The environment variable `VPN_SERVICE` should be set as follows:
+```yaml
+- VPN_SERVICE=MyVPN
+```
+2. The environment variable `VPN_SERVER` should contain the name of the certificate without the `.ovpn` extension.
+
+3. All other settings should be adjusted accordingly. Access credentials should be obtained from your VPN service provider.
+
+At this point, you can recreate the image:
+```bash
+docker build -t paolo83/myvpn-client-doh:latest -f Dockerfile .
+```
 
 ## Testing
 Once the container is up and running, you can perform connection tests to ensure everything is working properly.
