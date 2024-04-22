@@ -104,7 +104,7 @@ docker build -t paolo83/nordvpn-client-doh:latest -f Dockerfile .
 ```
 
 ### How to create an image for a different VPN service
-If you want to create the image to use a VPN service other than NordVPN, you can add its respective *.ovpn certificates and recreate the image. To do this, follow these steps:
+If you want to create the image to use a VPN service other than NordVPN, you can add its respective `*.ovpn` certificates and recreate the image. To do this, follow these steps:
 
 1. Clone the Git repository to your local machine:
 ```bash
