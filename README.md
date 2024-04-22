@@ -14,7 +14,7 @@ It originates from the integration of these projects:
   * from my other project [Docker Cloudflare DoH](https://github.com/paolo-hub/Docker-Cloudflare-DoH.git)
 
 ### 🙊 Psst... the unspoken truth
-This image is designed to utilize the NordVPN service but can easily be reconstructed for any other VPN service, see [How to create an image for a different VPN service section](###how_to_create_an_image_for_a_different_vpn_service).
+This image is designed to utilize the NordVPN service but can easily be reconstructed for any other VPN service, see [How to create an image for a different VPN service section](#how_to_create_an_image_for_a_different_vpn_service).
 
 ## How to Use It
 
