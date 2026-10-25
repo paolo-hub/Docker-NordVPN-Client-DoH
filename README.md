@@ -1,4 +1,15 @@
 # Docker-NordVPN-Client-DoH
+
+> [!CAUTION]
+> **DISCONTINUED / END OF LIFE — NOT MAINTAINED**
+>
+> This project has been discontinued and is no longer supported or maintained.
+> It has known bugs and should **not** be relied on for new deployments, especially where VPN connectivity or traffic isolation is security-critical.
+> No further bug fixes, security updates, or support are planned.
+> Existing users should migrate to a maintained alternative, such as [Gluetun](https://github.com/passteque/gluetun).
+> The source code remains available for historical reference only.
+
+---
 This Docker image simplifies the setup of a network container, directing traffic through NordVPN's VPN while securing DNS encryption via Cloudflare's DoH.
 
 ![alt text](https://badgen.net/badge/release/v.1.0/green?) ![alt text](https://badgen.net/badge/platform/Docker/blue?) ![alt text](https://badgen.net/badge/license/MIT/orange?)
